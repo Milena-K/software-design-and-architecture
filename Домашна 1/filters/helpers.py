@@ -1,7 +1,8 @@
 from selenium.webdriver.common.by import By
 from selenium import webdriver
+import sqlite3
 
-def insert_from_table_to_db():
+def insert_from_table_to_db(issuer_code: str):
     driver = webdriver.Chrome()
     driver.get("https://www.mse.mk/mk/stats/symbolhistory/kmb")
     table = driver.find_element(By.TAG_NAME, "table")
@@ -20,14 +21,14 @@ def insert_from_table_to_db():
         conn = sqlite3.connect("scraped_data.db")
         cursor = conn.cursor()
 
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS data_table (
+        cursor.execute(f"""
+            CREATE TABLE IF NOT EXISTS data_table_{issuer_code} (
                 Transaction_Date DATE,
                 Price_Of_Last_Transaction REAL,
                 Max REAL,
                 Min REAL,
                 Average_Price REAL,
-                %Change REAL,
+                Percent_Change REAL,
                 Quantity INTEGER,
                 Turnover_BEST_denars INTEGER,
                 Total_Turnover_denars INTEGER
@@ -35,12 +36,10 @@ def insert_from_table_to_db():
         """)
 
         for data in table_data:
-            cursor.execute(
-                """INSERT INTO data_table
-                (Transaction_Date, Price_Of_Last_Transaction, Max, Min, Average_Price, %Change, Quantity, Turnover_BEST_denars, Total_Turnover_denars)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?,)""",
-                data
-            )
+            sql_code = f"INSERT INTO data_table_{issuer_code}" \
+                       "(Transaction_Date, Price_Of_Last_Transaction, Max, Min, Average_Price, %Change, Quantity, Turnover_BEST_denars, Total_Turnover_denars)" \
+                       "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?,)"
+            cursor.execute(sql_code, data)
 
         conn.commit()
         conn.close()

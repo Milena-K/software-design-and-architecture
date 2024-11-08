@@ -25,7 +25,7 @@ def check_last_data(issuer_codes):
                     Total_Turnover_denars INTEGER
                 )
             """)
-            cursor.execute(f"SELECT MAX(Transaction_Date) FROM data_table_{code}")
+            cursor.execute(f"SELECT MAX(Transaction_Date) FROM data_table_{code}", (code,))
             last_date = cursor.fetchone()[0]
             if last_date:
                 last_date = datetime.strptime(last_date, "%d.%m.%Y").date()
@@ -33,7 +33,8 @@ def check_last_data(issuer_codes):
                     "fetch_from_date": last_date + timedelta(days=1)
                 }
             else:
-                load_10y_information(code)
+                pass
+                # load_10y_information(code)
         except sqlite3.OperationalError as e:
             print("OperationalError:", e)
 
@@ -46,29 +47,22 @@ driver = webdriver.Chrome()
 driver.get("https://www.mse.mk/mk/stats/symbolhistory/kmb")
 
 def load_10y_information(issuer_code):
+    # select code
+    dropdown = driver.find_element(By.ID, "Code")
+    select = Select(dropdown)
+    select.select_by_value(issuer_code)
+    # enter from date
+    fromDate = driver.find_element(By.ID, "FromDate")
     # add a while loop and get data for each year of the past 10 years
     this_year = datetime.now()
     year = 0
-    ####### TODO: add a waiting timer / check if every element is loaded
     while year < 10:
-        previous_year = (this_year - timedelta(days=364))
-        previous_year_str = previous_year.date().strftime("%d.%m.%Y")
-        print(previous_year_str)
-        # select issuer code
-        dropdown = driver.find_element(By.ID, "Code")
-        select = Select(dropdown)
-        select.select_by_value(issuer_code)
-        # enter from date
-        fromDate = driver.find_element(By.ID, "FromDate")
-        fromDate.send_keys(previous_year_str)
-        # enter to Date
-        toDate = driver.find_element(By.ID, "ToDate")
-        this_year_str = this_year.date().strftime("%d.%m.%Y")
-        toDate.send_keys(this_year_str)
+        year += 1
+        last_year = (this_year - timedelta(days=364))
+        last_year_str = last_year.date().strftime("%d.%m.%Y")
+        fromDate.send_keys(last_year_str)
+        this_year = last_year
         # click ze button
         button = driver.find_element(By.XPATH, '//*[@value="Прикажи"]')
         button.click()
         insert_from_table_to_db(issuer_code)
-        # prepare for next loop
-        this_year = previous_year
-        year += 1
