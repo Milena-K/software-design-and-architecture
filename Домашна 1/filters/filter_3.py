@@ -34,4 +34,4 @@ def fetch_data_for_issuer(issuer_code, start_date):
     # click ze button
     button = driver.find_element(By.XPATH, '//*[@value="Прикажи"]')
     button.click()
-    insert_from_table_to_db(issuer_code)
+    insert_from_table_to_db(driver, issuer_code)

@@ -1,10 +1,7 @@
 from selenium.webdriver.common.by import By
-from selenium import webdriver
 import sqlite3
 
-def insert_from_table_to_db(issuer_code: str):
-    driver = webdriver.Chrome()
-    driver.get("https://www.mse.mk/mk/stats/symbolhistory/kmb")
+def insert_from_table_to_db(driver, issuer_code: str):
     table = driver.find_element(By.TAG_NAME, "table")
     rows = table.find_elements(By.TAG_NAME, "tr")
     table_data = []
