@@ -1,0 +1,124 @@
+{
+  "pages": {
+    "/_app": [
+      "static/chunks/node_modules_next_dist_7376fd._.js",
+      "static/chunks/node_modules_react_1cad9b._.js",
+      "static/chunks/node_modules_react-dom_cjs_react-dom_development_ab7e07.js",
+      "static/chunks/node_modules_react-dom_f14d04._.js",
+      "static/chunks/node_modules_1126c6._.js",
+      "static/chunks/[root of the server]__fc10b9._.js",
+      "static/chunks/_e92ec8._.css",
+      "static/chunks/src_pages__app_5771e1._.js",
+      "static/chunks/src_pages__app_1766c2._.js"
+    ],
+    "/": [
+      "static/chunks/node_modules_next_51aac7._.js",
+      "static/chunks/node_modules_react_1cad9b._.js",
+      "static/chunks/node_modules_react-dom_cjs_react-dom_development_ab7e07.js",
+      "static/chunks/node_modules_react-dom_f14d04._.js",
+      "static/chunks/node_modules_69e050._.js",
+      "static/chunks/[root of the server]__783f92._.js",
+      "static/chunks/src_pages_index_5771e1._.js",
+      "static/chunks/src_pages_index_30f1ba._.js"
+    ],
+    "/_error": [
+      "static/chunks/[root of the server]__6c1ef0._.js",
+      "static/chunks/node_modules_react_b2385d._.js",
+      "static/chunks/node_modules_react-dom_cjs_react-dom_development_ab7e07.js",
+      "static/chunks/node_modules_react-dom_f14d04._.js",
+      "static/chunks/node_modules_69e050._.js",
+      "static/chunks/[root of the server]__e5d775._.js",
+      "static/chunks/src_pages__error_5771e1._.js",
+      "static/chunks/src_pages__error_65213a._.js"
+    ],
+    "/Finansiski": [
+      "static/chunks/node_modules_next_beb211._.js",
+      "static/chunks/node_modules_react_1cad9b._.js",
+      "static/chunks/node_modules_react-dom_cjs_react-dom_development_ab7e07.js",
+      "static/chunks/node_modules_react-dom_f14d04._.js",
+      "static/chunks/node_modules_69e050._.js",
+      "static/chunks/[root of the server]__17133e._.js",
+      "static/chunks/src_pages_Finansiski_5771e1._.js",
+      "static/chunks/src_pages_Finansiski_1ae47e._.js"
+    ],
+    "/MainPage": [
+      "static/chunks/node_modules_next_b3da25._.js",
+      "static/chunks/node_modules_react_1cad9b._.js",
+      "static/chunks/node_modules_react-dom_cjs_react-dom_development_ab7e07.js",
+      "static/chunks/node_modules_react-dom_f14d04._.js",
+      "static/chunks/node_modules_69e050._.js",
+      "static/chunks/[root of the server]__0ff561._.js",
+      "static/chunks/src_pages_MainPage_5771e1._.js",
+      "static/chunks/src_pages_MainPage_3bfa41._.js"
+    ],
+    "/Vesti": [
+      "static/chunks/node_modules_next_beb211._.js",
+      "static/chunks/node_modules_react_1cad9b._.js",
+      "static/chunks/node_modules_react-dom_cjs_react-dom_development_ab7e07.js",
+      "static/chunks/node_modules_react-dom_f14d04._.js",
+      "static/chunks/node_modules_69e050._.js",
+      "static/chunks/[root of the server]__6b32bb._.js",
+      "static/chunks/src_pages_Vesti_5771e1._.js",
+      "static/chunks/src_pages_Vesti_7d30fb._.js"
+    ],
+    "/Objavi": [
+      "static/chunks/node_modules_next_beb211._.js",
+      "static/chunks/node_modules_react_1cad9b._.js",
+      "static/chunks/node_modules_react-dom_cjs_react-dom_development_ab7e07.js",
+      "static/chunks/node_modules_react-dom_f14d04._.js",
+      "static/chunks/node_modules_69e050._.js",
+      "static/chunks/[root of the server]__102fbd._.js",
+      "static/chunks/src_pages_Objavi_5771e1._.js",
+      "static/chunks/src_pages_Objavi_edefef._.js"
+    ],
+    "/Pokazateli": [
+      "static/chunks/node_modules_next_beb211._.js",
+      "static/chunks/node_modules_react_1cad9b._.js",
+      "static/chunks/node_modules_react-dom_cjs_react-dom_development_ab7e07.js",
+      "static/chunks/node_modules_react-dom_f14d04._.js",
+      "static/chunks/node_modules_69e050._.js",
+      "static/chunks/[root of the server]__4fd30d._.js",
+      "static/chunks/src_pages_Pokazateli_5771e1._.js",
+      "static/chunks/src_pages_Pokazateli_5f8468._.js"
+    ],
+    "/Dejnost": [
+      "static/chunks/node_modules_next_beb211._.js",
+      "static/chunks/node_modules_react_1cad9b._.js",
+      "static/chunks/node_modules_react-dom_cjs_react-dom_development_ab7e07.js",
+      "static/chunks/node_modules_react-dom_f14d04._.js",
+      "static/chunks/node_modules_69e050._.js",
+      "static/chunks/[root of the server]__15a97d._.js",
+      "static/chunks/src_pages_Dejnost_5771e1._.js",
+      "static/chunks/src_pages_Dejnost_96a17e._.js"
+    ],
+    "/Uprava": [
+      "static/chunks/node_modules_next_beb211._.js",
+      "static/chunks/node_modules_react_1cad9b._.js",
+      "static/chunks/node_modules_react-dom_cjs_react-dom_development_ab7e07.js",
+      "static/chunks/node_modules_react-dom_f14d04._.js",
+      "static/chunks/node_modules_69e050._.js",
+      "static/chunks/[root of the server]__cac382._.js",
+      "static/chunks/src_pages_Uprava_5771e1._.js",
+      "static/chunks/src_pages_Uprava_796c4f._.js"
+    ],
+    "/Podatoci": [
+      "static/chunks/node_modules_next_beb211._.js",
+      "static/chunks/node_modules_react_1cad9b._.js",
+      "static/chunks/node_modules_react-dom_cjs_react-dom_development_ab7e07.js",
+      "static/chunks/node_modules_react-dom_f14d04._.js",
+      "static/chunks/node_modules_69e050._.js",
+      "static/chunks/[root of the server]__088d49._.js",
+      "static/chunks/src_pages_Podatoci_5771e1._.js",
+      "static/chunks/src_pages_Podatoci_1402da._.js"
+    ]
+  },
+  "devFiles": [],
+  "ampDevFiles": [],
+  "polyfillFiles": [],
+  "lowPriorityFiles": [
+    "static/development/_ssgManifest.js",
+    "static/development/_buildManifest.js"
+  ],
+  "rootMainFiles": [],
+  "ampFirstPages": []
+}
