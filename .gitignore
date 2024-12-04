@@ -2,9 +2,13 @@
 *.log
 *tmp/
 
+*.env
 *.tern-port
-*/node_modules/
+*node_modules/
 */npm-debug.log*
 *.tsbuildinfo
 *.npm
 *.eslintcache
+
+*env/
+*__pycache__/
