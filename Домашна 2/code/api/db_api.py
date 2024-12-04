@@ -8,7 +8,7 @@ CORS(app)
 
 def get_db_connection():
     conn = psycopg2.connect(
-        dbname="mse",
+        dbname="postgres",
         user="postgres",
         password="123456",
         host="localhost",
@@ -33,5 +33,5 @@ def get_companies():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5005)
+    app.run(host="localhost", port=5000)
     app.run(debug=True)
