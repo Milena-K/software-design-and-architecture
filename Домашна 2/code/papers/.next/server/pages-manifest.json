@@ -2,13 +2,5 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/_error": "pages/_error.js",
-  "/Finansiski": "pages/Finansiski.js",
-  "/MainPage": "pages/MainPage.js",
-  "/Vesti": "pages/Vesti.js",
-  "/Objavi": "pages/Objavi.js",
-  "/Pokazateli": "pages/Pokazateli.js",
-  "/Dejnost": "pages/Dejnost.js",
-  "/Uprava": "pages/Uprava.js",
-  "/Podatoci": "pages/Podatoci.js"
+  "/_error": "pages/_error.js"
 }

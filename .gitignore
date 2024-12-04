@@ -1,4 +1,4 @@
-.DS_Store
+*.DS_Store
 *.log
 *tmp/
 
@@ -12,3 +12,4 @@
 
 *env/
 *__pycache__/
+*.next/

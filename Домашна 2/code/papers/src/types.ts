@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image"
 
 export type Company = {
-    imageSrc: StaticImageData,
+    imageSrc: string,
     companyName: string,
 }
 

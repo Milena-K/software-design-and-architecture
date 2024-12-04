@@ -17,7 +17,7 @@ export default function InfoButtons() {
         const buttons = []
         for (const [name, link] of Object.entries(button_map)) {
             buttons.push(
-                <Link className="text-center" href={link}>
+                <Link className="text-center" href={link} key={name}>
                     <button className="bg-blue text-white w-3/4 p-2 rounded-lg m-auto">
                         {name}
                     </button>

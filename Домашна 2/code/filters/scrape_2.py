@@ -1,9 +1,11 @@
 import psycopg2
+from psycopg2 import sql
+
 
 def insert_data(data):
     # Establish a connection to the database
     conn = psycopg2.connect(
-        dbname="mse",
+        dbname="postgres",
         user="postgres",
         password="123456",
         host="localhost",

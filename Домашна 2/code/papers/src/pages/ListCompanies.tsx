@@ -1,25 +1,22 @@
 import React, { useMemo } from "react";
 import CompanyLink from "./CompanyLink";
-import alkaloid from "../../public/65bff55c-e5dd-478e-a593-344818e54a13.jpg"
-import Company from "../types"
-import { StaticImageData } from "next/image";
 
-export default function ListCompanies() {
-    const companies: Map<string, StaticImageData> = {
-        "Алкалоид АД Скопје 1": alkaloid,
-        "Алкалоид АД Скопје 2": alkaloid,
-        "Алкалоид АД Скопје 3": alkaloid,
-    }
+type Props = {
+    companies: []
+}
+export default function ListCompanies(props: Props) {
+    const baseURL = "https://www.mse.mk/"
+    console.log(props.companies)
 
     function listCompanies() {
         const list = []
-        for ( const [companyName, companyImg] of Object.entries(companies) ) {
-            list.push(<CompanyLink key={companyName} imageSrc={companyImg} companyName={companyName} />)
+        for (let i = 0; i < props.companies.length; i++) {
+            list.push(<CompanyLink key={props.companies[i][0]} imageSrc={baseURL + props.companies[i][1]} companyName={props.companies[i][2]} />)
         }
         return list
     }
 
-    const listOfCompanies = useMemo(listCompanies, [companies])
+    const listOfCompanies = useMemo(listCompanies, [props.companies])
     return (
         <div>
             {
